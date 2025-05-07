@@ -1,3 +1,5 @@
+
+
 export default function AboutComponent() {
   return (
     <div className="bg-red-500">

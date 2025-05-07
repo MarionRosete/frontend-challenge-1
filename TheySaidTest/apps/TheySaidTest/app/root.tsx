@@ -7,6 +7,8 @@ import {
   type MetaFunction,
   type LinksFunction,
 } from 'react-router';
+import { RecoilRoot } from 'recoil';
+
 
 import { AppNav } from './app-nav';
 
@@ -39,10 +41,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <RecoilRoot>
         <AppNav />
         {children}
         <ScrollRestoration />
         <Scripts />
+        </RecoilRoot>
       </body>
     </html>
   );
