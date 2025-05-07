@@ -1,0 +1,27 @@
+{
+  "name": "TheySaidTest",
+  "projectType": "application",
+  "sourceRoot": "apps/TheySaidTest/src",
+  "root": "apps/TheySaidTest",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "outputPath": "dist/apps/TheySaidTest"
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "buildTarget": "TheySaidTest:build"
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "options": {
+        "buildTarget": "TheySaidTest:build"
+      }
+    }
+  },
+  "tags": []
+}
